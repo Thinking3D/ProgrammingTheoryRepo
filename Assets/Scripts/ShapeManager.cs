@@ -5,12 +5,19 @@ using TMPro;
 
 public class ShapeManager : MonoBehaviour
 {
-	public TMP_Text didascalia;
+	public string nome {get; private set; }
+	public string colore {get; private set; }
+	public static string frase;
+	public static GameObject manager;
+	public static GameObject casellaTesto;
+	public static TMP_Text etichetta;
+	
+	
 	
     // Start is called before the first frame update
     void Start()
     {
-        
+	    
     }
 
     // Update is called once per frame
@@ -19,9 +26,14 @@ public class ShapeManager : MonoBehaviour
         
     }
     
-	// OnMouseDown is called when the user has pressed the mouse button while over the GUIElement or Collider.
-	protected void OnMouseDown()
+	// abstraction 
+	public virtual void PrintInfo()
 	{
-		
+		frase = "il mio nome è "+nome+" e sono di colore "+colore;
+		etichetta.text = frase;
+		print (frase);
 	}
+	//
+    
+	
 }
