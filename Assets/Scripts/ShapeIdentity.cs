@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+// INHERITANCE
 public class ShapeIdentity : ShapeManager
 {
+// ENCAPSULATION
 	private string m_nome;
 	public string nome 
 	{
@@ -69,6 +71,7 @@ public class ShapeIdentity : ShapeManager
 	{
 		frase = "il mio nome è "+m_nome+" e sono di colore "+m_colore;
 		etichetta.text = frase;
+// POLYMORPHISM
 		if (gameObject.tag=="cube")
 		{
 			etichetta.color = Color.red;
@@ -89,6 +92,7 @@ public class ShapeIdentity : ShapeManager
 	// OnMouseDown is called when the user has pressed the mouse button while over the GUIElement or Collider.
 	protected void OnMouseDown()
 	{
+// ABSTRACTION
 		PrintInfo();
 		
 	}
